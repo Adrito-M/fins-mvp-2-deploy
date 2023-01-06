@@ -1,0 +1,200 @@
+[
+    {
+      "id": 1,
+      "name": "Balance Box",
+      "description": "It’s a perfect blend of different asset classes to give you a stable and balanced returns in any market condition.",
+      "image": "/assets/iconbalancebox.svg",
+      "volatility": "low",
+      "minAmount": 25056,
+      "cagr": 15.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Passive Income",
+      "description": "This Finbox consists of stocks and asset classes that provide consistent dividends.",
+      "image": "/assets/iconpassiveincome.svg",
+      "volatility": "mid",
+      "minAmount": 11056,
+      "cagr": 19.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Real Estate",
+      "description": "It will be consisting of all the top REITs and InvITs in the market.",
+      "image": "/assets/iconrealestate.svg",
+      "volatility": "low",
+      "minAmount": 21056,
+      "cagr": 13.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Future Coins",
+      "description": "In this box you will be investing in most stable cryptocurrency and the project catering the future",
+      "image": "/assets/iconpassiveincome.svg",
+      "volatility": "high",
+      "minAmount": 6056,
+      "cagr": 36.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Bond Rules",
+      "description": "In this box will be investing in most stable cryptocurrency and project catering the future",
+      "image": "/assets/iconrealestate.svg",
+      "volatility": "low",
+      "minAmount": 37056,
+      "cagr": 11.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Momentum",
+      "description": "It will perfect blend for those who like sability like FD and returns similar to stocks",
+      "image": "/assets/iconbalancebox.svg",
+      "volatility": "mid",
+      "minAmount": 37056,
+      "cagr": 40.67,
+      "crypto": [
+        {
+          "symbol": "BTC",
+          "quantity": "0.00008"
+        }
+      ],
+      "others": [
+        {
+          "tradingsymbol": "TATACONSUM",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "JUBLFOOD",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "DABUR",
+          "quantity": 1
+        },
+        {
+          "tradingsymbol": "CROMPTON",
+          "quantity": 1
+        }
+      ]
+    }
+  ]

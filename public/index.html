@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finswealth</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="tailwind.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="navbar" style="z-index: 100;">
+        <div class="logo" onclick="window.location.href='/index.html'">
+            <img src="./assets/fins.svg" style="height:24px">
+            Fins
+        </div>
+        <div class="menu">
+                <div class="menu-item" onclick="window.location.href='/index.html'">Home</div>
+                <div class="menu-item" onclick="window.location.href='/index.html'">Discover</div>
+                <div class="menu-item" onclick="window.location.href='/index.html'">Learn</div>
+                <div class="menu-item" onclick="window.location.href='/index.html'">About Us</div>
+                <div class="menu-item">Login</div>
+                <button id="sign-up">Sign up</button>
+        </div>
+        <div id="button-icon">
+            <div id="nav-icon"></div>
+            <div id="nav-icon"></div>
+            <div id="nav-icon"></div>
+        </div>
+    </div>
+    <div id="bottom-links" style="z-index:100">
+        <div class="menu-item" onclick="window.location.href='/index.html'">Home</div>
+        <div class="menu-item" onclick="window.location.href='/index.html'">Discover</div>
+        <div class="menu-item" onclick="window.location.href='/index.html'">Learn</div>
+        <div class="menu-item" onclick="window.location.href='/index.html'">About Us</div>
+        <div class="menu-item">Login</div>
+    </div>
+    <div class="landing">
+        <div class="landing-left">
+            <p>Single Platform To Diversify Your Portfolio</p>
+            <p>Invest in Stocks, RIETs, Crypto, Bonds and Gold on a single platform.</p>
+            <button onclick="window.location.href = '/finboxes.html'">See Finboxes</button>
+        </div>
+        <div style="display:grid;justify-content:center; align-items:center;">
+            <img src="./assets/front.svg" style="width:40vw">
+        </div>
+    </div>
+    <div style="width:100%; background-color: white!important; text-align: center;">
+        <p style="font-size:3vw;font-weight: 700; width:80vw;margin:auto; padding-top: 40px;">
+            Platform for Curated Investment Opportunities In All Asset Classes
+        </p>
+        <img src="./assets/demopie.svg" style="width:75vw; padding-top: 40px;">
+        <p style="font-size:3vw;font-weight:700; padding-top: 80px; width:80vw; margin:auto">Fins Amazing Features</p>
+        <div class="mac-grid">
+            <div style="display:flex; align-items: center; justify-content: center;">
+                <img src="./assets/macbook.svg" style="max-width:40vw">
+            </div>
+            <div style="text-align: left!important;">
+                <div class="mac-right">
+                    <p class="mac-right-heading">
+                        <img src="./assets/indexicon1.svg" style="max-width: 5vw;">
+                        Create Multiple Finboxes
+                    </p>
+                    <p class="mac-right-description">Each Finbox will have a different percentage of asset class to satisfy all your investment needs.</p>
+                </div>
+                <div class="mac-right">
+                    <p class="mac-right-heading">
+                        <img src="./assets/indexicon2.svg" style="max-width: 5vw;">
+                        Create your own Finbox
+                    </p>
+                    <p class="mac-right-description">You can create your own Finbox according to your choice and preference.</p>
+                </div>
+                <div class="mac-right">
+                    <p class="mac-right-heading">
+                        <img src="./assets/indexicon3.svg" style="max-width: 5vw;">
+                        Customise existing box
+                    </p>
+                    <p class="mac-right-description">You can customise the finboxes according to your need and risk profile</p>
+                </div>
+            </div>
+        </div>
+        <p style="padding-top:15vw; font-weight:700; font-size: 3vw; width: 80vw; margin: auto">Learn About</p>
+        <div class="about">
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonsstocks.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    Stocks
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Invest in stock from various industries
+                </p>
+            </div>
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonsreits.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    REIT’s & InvIT’s
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Easier and less risky way to invest into real estate
+                </p>
+            </div>
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonsbonds.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    Bonds
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Bonds are secure as FD & has returns similar to equity market
+                </p>
+            </div>
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonsgold.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    Gold
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Manage your events at the palm of your hand with our Oragniser App.
+                </p>
+            </div>
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonscrypto.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    Crypto
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Crypto is the asset class of future 
+                </p>
+            </div>
+            <div class="about-items">
+                <div style="grid-row-end: span 2;">
+                    <img src="./assets/abouticonsequity.svg" style="width: 8vw;">
+                </div>
+                <p style="display:grid; margin: 0px; font-size: 2vw; font-weight: 600;">
+                    Equity
+                </p>
+                <p style="display:grid; margin: 0px; font-size:1.4vw; color:#787983; padding-bottom: 1vw;">
+                    Invest in equity from various industries
+                </p>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 7fr 1fr 1fr; width:80vw; margin:auto; text-align: left; padding-top: 10vw; gap: 2vw;">
+            <div>
+                <p style="font-size: 3vw; color: #5766F6; font-weight: 600; margin: 0; margin-bottom: 2vw">Fins</p>
+                <p style="max-width:70%; font-size: 1.2vw; color:#787983; margin: 0">We are making your investment journey easier than ever by making a single platform to invest in Stocks, ETF’s, Real Estate, Crypto and Bonds through our product finbox which are created & managed by leading professionals who are SEBI registered research analysts and investment advisors, through your existing broker account and crypto wallet.</p>
+            </div>
+            <div style="display:flex; flex-direction:column; justify-content: space-between;">
+                <div style="color:#262C6A; font-size: 1.5vw">Quick Link</div>
+                <div style="color: #424672DB; font-size: 1vw">FAQ's</div>
+                <div style="color: #424672DB; font-size: 1vw">About us</div>
+                <div style="color: #424672DB; font-size: 1vw">Learn</div>
+                <div style="color: #424672DB; font-size: 1vw">T&C</div>
+            </div>
+            <div style="display:flex; flex-direction:column; justify-content: space-between;">
+                <div style="color:#262C6A; font-size: 1.5vw">Contact Us</div>
+                <div style="color: #424672DB; font-size: 1vw">Terms of Use</div>
+                <div style="color: #424672DB; font-size: 1vw">Privacy Policy</div>
+                <div style="color: #424672DB; font-size: 1vw">Support</div>
+                <div style="color: #424672DB; font-size: 1vw">Location</div>
+            </div>
+        </div>
+
+        <div style="height: 5vw;"></div>
+
+
+        <div class="footer" style="text-align: left">
+            <div class="logo" onclick="window.location.href='/index.html'">
+                <img src="./assets/fins.svg" style="max-height: 2.4vw;">
+                <span style="font-size: 1.4vw;">Fins</span>
+            </div>
+            <div class="copyright" style="font-size: 1.2vw;">© 2022 Copyright and rights reserved</div>
+            <div class="footer-links">
+                <img src="./assets/facebook.svg" style="height: 2.2vw" alt="facebook" srcset="">
+                <img src="./assets/twitter.svg" style="height: 2.2vw"  alt="twitter" srcset="">
+                <img src="./assets/insta.svg" style="height: 2.2vw"  alt="insta" srcset="">
+                <img src="./assets/linkedin.svg" style="height: 2.2vw"  alt="linkedin" srcset="">
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;" id="modal">
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>

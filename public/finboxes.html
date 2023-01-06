@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Finboxes</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- <link rel="stylesheet" href="tailwind.css"> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+		<link rel="icon" type="image/png" href="/assets/favicon.png">
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div class="navbar" style="z-index: 100">
+			<div class="logo" onclick="window.location.href='/index.html'">
+				<img src="./assets/fins.svg" style="height: 24px" />
+				Fins
+			</div>
+			<div class="menu">
+				<div class="menu-item" onclick="window.location.href='/index.html'">Home</div>
+				<div class="menu-item" onclick="window.location.href='/index.html'">Discover</div>
+				<div class="menu-item" onclick="window.location.href='/index.html'">Learn</div>
+				<div class="menu-item" onclick="window.location.href='/index.html'">About Us</div>
+				<div class="menu-item">Login</div>
+				<button id="sign-up">Sign up</button>
+			</div>
+			<div id="button-icon">
+				<div id="nav-icon"></div>
+				<div id="nav-icon"></div>
+				<div id="nav-icon"></div>
+			</div>
+		</div>
+		<div id="bottom-links" style="z-index: 100">
+			<div class="menu-item onclick="window.location.href='/index.html'">Home</div>
+			<div class="menu-item onclick="window.location.href='/index.html'">Discover</div>
+			<div class="menu-item onclick="window.location.href='/index.html'">Learn</div>
+			<div class="menu-item onclick="window.location.href='/index.html'">About Us</div>
+			<div class="menu-item">Login</div>
+		</div>
+
+		<div style="margin-top: 1vw; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding-inline: 10vw">
+			<div style="color: #6371f9; border-bottom: 1px solid #6371f9; height: 3.5vw; display: flex; align-items: center; font-size: 1.4vw">
+				All Finboxes
+			</div>
+			<div style="margin-block: 1em; color: grey; font-size: 1.4vw">
+				<img src="./assets/search.svg" style="max-width: 1vw; padding-inline: 1vw" />Try Searching “Balanced Box”
+			</div>
+		</div>
+
+		<div id="boxlist"></div>
+
+		<div style="display: grid; grid-template-columns: 7fr 1fr 1fr; width: 80vw; margin: auto; text-align: left; padding-top: 10vw; gap: 2vw">
+			<div>
+				<p style="font-size: 3vw; color: #5766f6; font-weight: 600; margin: 0; margin-bottom: 2vw">Fins</p>
+				<p style="max-width: 70%; font-size: 1.2vw; color: #787983; margin: 0">
+					We are making your investment journey easier than ever by making a single platform to invest in Stocks, ETF’s, Real Estate, Crypto
+					and Bonds through our product finbox which are created & managed by leading professionals who are SEBI registered research
+					analysts and investment advisors, through your existing broker account and crypto wallet.
+				</p>
+			</div>
+			<div style="display: flex; flex-direction: column; justify-content: space-between">
+				<div style="color: #262c6a; font-size: 1.5vw">Quick Link</div>
+				<div style="color: #424672db; font-size: 1vw">FAQ's</div>
+				<div style="color: #424672db; font-size: 1vw">About us</div>
+				<div style="color: #424672db; font-size: 1vw">Learn</div>
+				<div style="color: #424672db; font-size: 1vw">T&C</div>
+			</div>
+			<div style="display: flex; flex-direction: column; justify-content: space-between">
+				<div style="color: #262c6a; font-size: 1.5vw">Contact Us</div>
+				<div style="color: #424672db; font-size: 1vw">Terms of Use</div>
+				<div style="color: #424672db; font-size: 1vw">Privacy Policy</div>
+				<div style="color: #424672db; font-size: 1vw">Support</div>
+				<div style="color: #424672db; font-size: 1vw">Location</div>
+			</div>
+		</div>
+
+		<div style="height: 5vw"></div>
+
+		<div class="footer" style="text-align: left">
+			<div class="logo" onclick="window.location.href='/index.html'">
+				<img src="./assets/fins.svg" style="max-height: 2.4vw" />
+				<span style="font-size: 1.4vw">Fins</span>
+			</div>
+			<div class="copyright" style="font-size: 1.2vw">© 2022 Copyright and rights reserved</div>
+			<div class="footer-links">
+				<img src="./assets/facebook.svg" style="height: 2.2vw" alt="facebook" srcset="" />
+				<img src="./assets/twitter.svg" style="height: 2.2vw" alt="twitter" srcset="" />
+				<img src="./assets/insta.svg" style="height: 2.2vw" alt="insta" srcset="" />
+				<img src="./assets/linkedin.svg" style="height: 2.2vw" alt="linkedin" srcset="" />
+			</div>
+		</div>
+	</body>
+	<script>
+		// const API_URL = 'http://127.0.0.1:8000'
+		async function populate() {
+			const container = document.querySelector('#boxlist')
+			// const boxes = await fetch(`${API_URL}/api/box`).then(res => res.json())
+			const boxes = await fetch(`/boxes.json`).then(res => res.json())
+			boxes.forEach(box => {
+				const item = document.createElement('div')
+				item.style.display = 'grid'
+				item.style.gridTemplateColumns = '2fr 4fr 2fr 1fr 1fr'
+				item.style.cursor = 'pointer'
+				item.style.maxWidth = '80vw'
+				item.style.margin = 'auto'
+				item.style.borderBottom = '1px solid gray'
+				item.style.padding = '2vw'
+				item.addEventListener('click', () => {
+					sessionStorage.setItem('boxid', box.id)
+					window.location.href = `/details.html`
+				})
+				item.innerHTML = `
+                    <div style="display: grid; align-items: center; justify-content:center">
+                        <img src="${box.image}" style="width:13vw">
+                    </div>
+                    <div style="display:flex; flex-direction: column;">
+                        <p style="font-weight:600; font-size:2vw">${box.name}</p>
+                        <p style="color: #7B8289; text-align: justify; font-size: 1.1vw;">${box.description}</p>
+                    </div>
+                    <div style="display:flex; flex-direction: column; align-items: center; height: 100%; justify-content: center">
+                        <img src="./assets/volatility${box.volatility}.svg">
+                        <p style="font-size: 1.2vw">${box.volatility[0].toUpperCase()}${box.volatility.slice(1)} Volatility</p>
+                    </div>
+                    <div style="display:flex; flex-direction: column; align-items: end; height: 100%; justify-content: center">
+                        <p style="font-size: 1.2vw; color:#7B8289;">Min. Amount</p>
+                        <p style="font-size: 1.2vw; font-weight: 900; white-space: pre">₹  ${box.minAmount}</p>
+                    </div>
+                    <div style="display:flex; flex-direction: column; align-items: end; height: 100%; justify-content: center">
+                        <p style="font-size: 1.2vw; color:#7B8289;">5Y CAGR</p>
+                        <p style="font-size: 1.2vw; color: green; font-weight:700;">${box.cagr} %</p>
+                    </div>
+                    `
+				container.appendChild(item)
+			})
+		}
+		populate()
+	</script>
+</html>

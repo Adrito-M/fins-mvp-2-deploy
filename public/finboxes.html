@@ -20,7 +20,7 @@
 	<body>
 		<div class="navbar" style="z-index: 100">
 			<div class="logo" onclick="window.location.href='/index.html'">
-				<img src="./assets/fins.svg" style="height: 24px" />
+				<img loading="lazy"  src="./assets/fins.svg" style="height: 24px" />
 				Fins
 			</div>
 			<div class="menu">
@@ -50,7 +50,7 @@
 				All Finboxes
 			</div>
 			<div style="margin-block: 1em; color: grey; font-size: 1.4vw">
-				<img src="./assets/search.svg" style="max-width: 1vw; padding-inline: 1vw" />Try Searching “Balanced Box”
+				<img loading="lazy"  src="./assets/search.svg" style="max-width: 1vw; padding-inline: 1vw" />Try Searching “Balanced Box”
 			</div>
 		</div>
 
@@ -85,15 +85,15 @@
 
 		<div class="footer" style="text-align: left">
 			<div class="logo" onclick="window.location.href='/index.html'">
-				<img src="./assets/fins.svg" style="max-height: 2.4vw" />
+				<img loading="lazy"  src="./assets/fins.svg" style="max-height: 2.4vw" />
 				<span style="font-size: 1.4vw">Fins</span>
 			</div>
 			<div class="copyright" style="font-size: 1.2vw">© 2022 Copyright and rights reserved</div>
 			<div class="footer-links">
-				<img src="./assets/facebook.svg" style="height: 2.2vw" alt="facebook" srcset="" />
-				<img src="./assets/twitter.svg" style="height: 2.2vw" alt="twitter" srcset="" />
-				<img src="./assets/insta.svg" style="height: 2.2vw" alt="insta" srcset="" />
-				<img src="./assets/linkedin.svg" style="height: 2.2vw" alt="linkedin" srcset="" />
+				<img loading="lazy"  src="./assets/facebook.svg" style="height: 2.2vw" alt="facebook" srcset="" />
+				<img loading="lazy"  src="./assets/twitter.svg" style="height: 2.2vw" alt="twitter" srcset="" />
+				<img loading="lazy"  src="./assets/insta.svg" style="height: 2.2vw" alt="insta" srcset="" />
+				<img loading="lazy"  src="./assets/linkedin.svg" style="height: 2.2vw" alt="linkedin" srcset="" />
 			</div>
 		</div>
 	</body>
@@ -118,14 +118,14 @@
 				})
 				item.innerHTML = `
                     <div style="display: grid; align-items: center; justify-content:center">
-                        <img src="${box.image}" style="width:13vw">
+                        <img loading="lazy"  src="${box.image}" style="width:13vw">
                     </div>
                     <div style="display:flex; flex-direction: column;">
                         <p style="font-weight:600; font-size:2vw">${box.name}</p>
                         <p style="color: #7B8289; text-align: justify; font-size: 1.1vw;">${box.description}</p>
                     </div>
                     <div style="display:flex; flex-direction: column; align-items: center; height: 100%; justify-content: center">
-                        <img src="./assets/volatility${box.volatility}.svg">
+                        <img loading="lazy"  src="./assets/volatility${box.volatility}.svg">
                         <p style="font-size: 1.2vw">${box.volatility[0].toUpperCase()}${box.volatility.slice(1)} Volatility</p>
                     </div>
                     <div style="display:flex; flex-direction: column; align-items: end; height: 100%; justify-content: center">

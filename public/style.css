@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: 'Plus Jakarta Sans';
@@ -20,11 +24,14 @@ button {
     margin: inherit;
 }
 
-.navbar{
+.header {
     position: sticky;
     left: 0;
     top: 0;
-    max-height: 2em;
+    z-index: 100;
+}
+
+.navbar{
     background: white;
     display: flex;
     justify-content: space-between;
@@ -33,7 +40,7 @@ button {
     align-items: center;
     box-shadow: 0px 0px 0.2em grey;
     padding-left: 10vw;
-    padding-right: 6vw;
+    padding-right: 10vw;
 }
 .logo {
     display: flex;

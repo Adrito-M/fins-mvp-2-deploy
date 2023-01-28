@@ -15,34 +15,13 @@
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
         <link rel="icon" type="image/png" href="/assets/favicon.png">
 		<script src="main.js" defer></script>
+		<script src="components/header.js" defer></script>
+		<script src="components/footer.js" defer></script>
 	</head>
 	<body>
-		<div class="navbar" style="z-index: 100">
-			<div class="logo" onclick="window.location.href='/index.html'">
-				<img loading="lazy"  src="./assets/fins.svg" style="height: 24px" />
-				Fins
-			</div>
-			<div class="menu">
-				<div class="menu-item" onclick="window.location.href='/index.html'">Home</div>
-				<div class="menu-item" onclick="window.location.href='/index.html'">Discover</div>
-				<div class="menu-item" onclick="window.location.href='/index.html'">Learn</div>
-				<div class="menu-item" onclick="window.location.href='/index.html'">About Us</div>
-				<div class="menu-item">Login</div>
-				<button id="sign-up">Sign up</button>
-			</div>
-			<div id="button-icon">
-				<div id="nav-icon"></div>
-				<div id="nav-icon"></div>
-				<div id="nav-icon"></div>
-			</div>
-		</div>
-		<div id="bottom-links" style="z-index: 100">
-			<div class="menu-item" onclick="window.location.href='/index.html'">Home</div>
-			<div class="menu-item" onclick="window.location.href='/index.html'">Discover</div>
-			<div class="menu-item" onclick="window.location.href='/index.html'">Learn</div>
-			<div class="menu-item" onclick="window.location.href='/index.html'">About Us</div>
-			<div class="menu-item">Login</div>
-		</div>
+		
+		<header-element></header-element>
+
 		<div
 			id="boxcard"
 			style="
@@ -63,9 +42,7 @@
 		<div style="display: grid; grid-template-columns: 3fr 1fr; gap: 4vw; width: 80vw; margin: auto; margin-top: 2vw">
 			<div style="display: flex; flex-direction: column; justify-content: space-between">
 				<div style="font-weight: 700; font-size: 2vw">About The Finbox</div>
-				<div style="font-size: 1.2vw; color: #787983">
-					It’s a perfect blend of different asset classes. As this finbox consist of most stable bonds, Crypto, Stocks and ETF of their
-					respected space that’s why this box give you a stable and balanced returns in any market condition.
+				<div style="font-size: max(1.2vw, 8px) ; color: #787983" id="about-the-box">
 				</div>
 			</div>
 			<div style="display: flex; flex-direction: column">
@@ -104,46 +81,8 @@
 			<img loading="lazy"  src="./assets/distribution.svg" style="width: 100%" />
 		</div>
 
-		<div style="display: grid; grid-template-columns: 7fr 1fr 1fr; width: 80vw; margin: auto; text-align: left; padding-top: 4vw; gap: 2vw">
-			<div>
-				<p style="font-size: 3vw; color: #5766f6; font-weight: 600; margin: 0; margin-bottom: 2vw">Fins</p>
-				<p style="max-width: 70%; font-size: 1.2vw; color: #787983; margin: 0">
-					We are making your investment journey easier than ever by making a single platform to invest in Stocks, ETF’s, Real Estate, Crypto
-					and Bonds through our product finbox which are created & managed by leading professionals who are SEBI registered research
-					analysts and investment advisors, through your existing broker account and crypto wallet.
-				</p>
-			</div>
-			<div style="display: flex; flex-direction: column; justify-content: space-between">
-				<div style="color: #262c6a; font-size: 1.5vw">Quick Link</div>
-				<div style="color: #424672db; font-size: 1vw">FAQ's</div>
-				<div style="color: #424672db; font-size: 1vw">About us</div>
-				<div style="color: #424672db; font-size: 1vw">Learn</div>
-				<div style="color: #424672db; font-size: 1vw">T&C</div>
-			</div>
-			<div style="display: flex; flex-direction: column; justify-content: space-between">
-				<div style="color: #262c6a; font-size: 1.5vw">Contact Us</div>
-				<div style="color: #424672db; font-size: 1vw">Terms of Use</div>
-				<div style="color: #424672db; font-size: 1vw">Privacy Policy</div>
-				<div style="color: #424672db; font-size: 1vw">Support</div>
-				<div style="color: #424672db; font-size: 1vw">Location</div>
-			</div>
-		</div>
+		<footer-element></footer-element>
 
-		<div style="height: 5vw"></div>
-
-		<div class="footer" style="text-align: left">
-			<div class="logo" onclick="window.location.href='/index.html'">
-				<img loading="lazy"  src="./assets/fins.svg" style="max-height: 2.4vw" />
-				<span style="font-size: 1.4vw">Fins</span>
-			</div>
-			<div class="copyright" style="font-size: 1.2vw">© 2022 Copyright and rights reserved</div>
-			<div class="footer-links">
-				<img loading="lazy"  src="./assets/facebook.svg" style="height: 2.2vw" alt="facebook" srcset="" />
-				<img loading="lazy"  src="./assets/twitter.svg" style="height: 2.2vw" alt="twitter" srcset="" />
-				<img loading="lazy"  src="./assets/insta.svg" style="height: 2.2vw" alt="insta" srcset="" />
-				<img loading="lazy"  src="./assets/linkedin.svg" style="height: 2.2vw" alt="linkedin" srcset="" />
-			</div>
-		</div>
 		<script src="publisher.js"></script>
 		<script>
             let box
@@ -154,17 +93,18 @@
 				const boxes = await fetch('/boxes.json').then(res => res.json())
 				const id = sessionStorage.getItem('boxid')
 				box = boxes.filter(box => box.id == id)[0]
+				document.querySelector('#about-the-box').innerText = box.description;
 				document.querySelector('#minamt').innerText = `₹  ${box.minAmount}`
 				boxcard.innerHTML = `
                     <div style="display: grid; align-items: center; justify-content:center">
                         <img loading="lazy"  src="${box.image}" style="width:13vw">
                     </div>
                     <div style="display:flex; flex-direction: column;">
-                        <p style="font-weight:600; font-size:2vw">${box.name}</p>
-                        <p style="color: #7B8289; text-align: justify; font-size: 1.1vw;">${box.description}</p>
+                        <p style="font-weight:600; font-size:max(2vw, 10px)">${box.name}</p>
+                        <p style="color: #7B8289; text-align: justify; font-size: max(1.1vw, 8px);">${box.description}</p>
                     </div>
                     <div style="display:flex; flex-direction: column; align-items: center; height: 100%; justify-content: center">
-                        <img loading="lazy"  src="./assets/volatility${box.volatility}.svg">
+                        <img loading="lazy"  src="./assets/volatility${box.volatility}.svg" style="width:7vw">
                         <p style="font-size: 1.2vw">${box.volatility[0].toUpperCase()}${box.volatility.slice(1)} Volatility</p>
                     </div>
                     <div style="display:flex; flex-direction: column; align-items: end; height: 100%; justify-content: center">
@@ -185,6 +125,7 @@
 							quantity: stock.quantity,
 							transaction_type: 'BUY',
 							order_type: 'MARKET',
+							readonly: true,
 						})
 					)
 					kite.link('#buybtn')

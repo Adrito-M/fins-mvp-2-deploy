@@ -3,9 +3,23 @@
 body{
     margin: 0;
     font-family: 'Plus Jakarta Sans';
-    background-color:white; 
-    overflow-x: hidden;
+    background-color:white;
+    min-height: 100vh;
 }
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+button {
+    background-color: inherit;
+    border: inherit;
+    color: inherit;
+    padding: inherit;
+    margin: inherit;
+}
+
 .navbar{
     position: sticky;
     left: 0;
@@ -13,16 +27,18 @@ body{
     max-height: 2em;
     background: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0.7em;
     flex-direction: row;
     align-items: center;
     box-shadow: 0px 0px 0.2em grey;
+    padding-left: 10vw;
+    padding-right: 6vw;
 }
 .logo {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
     font-size: large;
     font-weight: bolder;
     color: #6A77FB;
@@ -75,10 +91,23 @@ body{
 
 #bottom-links {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding-left: 10;
+    /* flex-direction: column; */
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
     cursor: pointer;
+    background-color: #f3f4ff;
+    justify-content: space-between;
+}
+
+.bottom-menu-item {
+    font-size: 3vw;
+    color:#5766F6;
+    border:#5766F6 solid 1px;
+    padding: 1vw;
+    border-radius: 1vw;
+    background-color: transparent;
 }
 
 #button-icon {
